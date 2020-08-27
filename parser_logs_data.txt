@@ -1,0 +1,237 @@
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} %{WORD:label}: (?<err_type>Could not load block) %{BASE16NUM:block-hash} %{GREEDYDATA}height %{NUMBER:height}%{GREEDYDATA}
+    1598186732 - 2020-08-23 12:45:32.840 VerifyBlockMiner: Could not load block 0000008634e45aab01f3df46f3c66005c3a7cb9e636cadedcc9aabeffd7c2ea5 (height 208) from disk
+    {
+      "recv-time": "1598186732",
+      "err_type": "Could not load block",
+      "block-hash": "0000008634e45aab01f3df46f3c66005c3a7cb9e636cadedcc9aabeffd7c2ea5",
+      "recv-date": "2020-08-23 12:45:32.840",
+      "label": "VerifyBlockMiner",
+      "height": "208"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} %{WORD:label}: (?<err_type>Permission denied) for miner %{WORD:miner_id}%{GREEDYDATA}
+    1598184745 - 2020-08-23 12:12:25.177 VerifyBlockMiner: Permission denied for miner 1NWeYcQfpt876UWBmgvk2JGVHNDXbfncbcmeR6 received in block signature
+    {
+      "recv-time": "1598184745",
+      "err_type": "Permission denied",
+      "miner_id": "1NWeYcQfpt876UWBmgvk2JGVHNDXbfncbcmeR6",
+      "recv-date": "2020-08-23 12:12:25.177",
+      "label": "VerifyBlockMiner"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} %{WORD:label}: Block %{BASE16NUM:block-hash} %{GREEDYDATA}height %{NUMBER:height}%{GREEDYDATA} (?<err_type>miner verification %{WORD}) 
+    1598182819 - 2020-08-23 11:40:19.824 VerifyBlockMiner: Block 000000615ba90dcaa0dc1069a31acdd4f1ab6cfa1f67864238d29da44757b9fc (height 38) miner verification skipped
+    {
+      "recv-time": "1598182819",
+      "err_type": "miner verification skipped",
+      "block-hash": "000000615ba90dcaa0dc1069a31acdd4f1ab6cfa1f67864238d29da44757b9fc",
+      "recv-date": "2020-08-23 11:40:19.824",
+      "label": "VerifyBlockMiner",
+      "height": "38"
+    }
+
+    1598186599 - 2020-08-23 12:43:19.026 VerifyBlockMiner: Block 000000bfea12c5d3af153fa6852fdc97cb2e6dcf3e1c489fc9f15b6166e411d6 (height 88) miner verification failed
+    {
+      "recv-time": "1598186599",
+      "err_type": "miner verification failed",
+      "block-hash": "000000bfea12c5d3af153fa6852fdc97cb2e6dcf3e1c489fc9f15b6166e411d6",
+      "recv-date": "2020-08-23 12:43:19.026",
+      "label": "VerifyBlockMiner",
+      "height": "88"
+    }
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} %{WORD:label} %{WORD:direction} error (?<err_type>Connection reset by peer) %{GREEDYDATA}%{NUMBER:err_code}%{GREEDYDATA}
+    1598185554 - 2020-08-23 12:25:54.631 socket recv error Connection reset by peer (104)
+    {
+      "recv-time": "1598185554",
+      "err_type": "Connection reset by peer",
+      "recv-date": "2020-08-23 12:25:54.631",
+      "err_code": "104",
+      "label": "socket",
+      "direction": "recv"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} %{WORD:label} select error (?<err_type>Bad file descriptor) %{GREEDYDATA}%{NUMBER:err_code}%{GREEDYDATA}
+    1598522074 - 2020-08-27 09:54:34.739 socket select error Bad file descriptor (9)
+    {
+      "recv-time": "1598522074",
+      "err_type": "Bad file descriptor",
+      "recv-date": "2020-08-27 09:54:34.739",
+      "label": "socket",
+      "err_code": "9"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} %{WORD:label} %{WORD:direction} error (?<err_type>Broken pipe) %{GREEDYDATA}%{NUMBER:err_code}%{GREEDYDATA}
+    1598183649 - 2020-08-23 11:54:09.782 socket send error Broken pipe (32)
+    {
+      "recv-time": "1598183649",
+      "err_type": "Broken pipe",
+      "recv-date": "2020-08-23 11:54:09.782",
+      "err_code": "32",
+      "label": "socket",
+      "direction": "send"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} Using at most %{NUMBER:nb_connections} %{WORD:label} %{GREEDYDATA}%{NUMBER:nb_fileDescriptors}%{GREEDYDATA}
+    1598182049 - 2020-08-23 11:27:29.974 Using at most 125 connections (1024 file descriptors available)
+    {
+      "recv-time": "1598182049",
+      "nb_connections": "125",
+      "recv-date": "2020-08-23 11:27:29.974",
+      "nb_fileDescriptors": "1024",
+      "label": "connections"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} %{WORD:label} %{WORD:err_type}: %{NUMBER:duration}s
+    1598186315 - 2020-08-23 12:38:35.325 ping timeout: 60.020687s
+    {
+      "duration": "60.020687",
+      "recv-time": "1598186315",
+      "err_type": "timeout",
+      "recv-date": "2020-08-23 12:38:35.325",
+      "label": "ping"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} %{WORD:label} %{WORD:direction} (?<err_type>timeout): %{NUMBER:duration}s
+    1598191335 - 2020-08-23 14:02:15.028 socket receive timeout: 61s
+    {
+      "duration": "61",
+      "recv-time": "1598191335",
+      "err_type": "timeout",
+      "recv-date": "2020-08-23 14:02:15.028",
+      "label": "socket",
+      "direction": "receive"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} (?<err_type>Timeout downloading block) %{BASE16NUM:block-hash} from peer=%{NUMBER:num_peer}
+    1598185720 - 2020-08-23 12:28:40.117 Timeout downloading block 0000006dbd080e2c817df93cccb951ba1c316129e122bb70bf61e77a7f59d34a from peer=94, disconnecting
+    {
+      "recv-time": "1598185720",
+      "err_type": "Timeout downloading block",
+      "num_peer": "94",
+      "block-hash": "0000006dbd080e2c817df93cccb951ba1c316129e122bb70bf61e77a7f59d34a",
+      "recv-date": "2020-08-23 12:28:40.117"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} (?<err_type>Tx not accepted) in resurrection after block: %{WORD:block_id}
+    1598185442 - 2020-08-23 12:24:02.151 Tx not accepted in resurrection after block: 6f152b58e54ac26f20284f6d6a66484785d220ad6f93dff3ed4e5c178c72e4a3
+    {
+      "recv-time": "1598185442",
+      "err_type": "Tx not accepted",
+      "recv-date": "2020-08-23 12:24:02.151",
+      "block_id": "6f152b58e54ac26f20284f6d6a66484785d220ad6f93dff3ed4e5c178c72e4a3"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} ERROR: %{WORD:label} : (?<err_type>generated block is stale)
+    1598186310 - 2020-08-23 12:38:30.653 ERROR: MultiChainMiner : generated block is stale
+    {
+      "recv-time": "1598186310",
+      "err_type": "generated block is stale",
+      "recv-date": "2020-08-23 12:38:30.653",
+      "label": "MultiChainMiner"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} ERROR: %{WORD:label} : (?<err_type>AcceptBlock FAILED)
+    1598523855 - 2020-08-27 10:24:15.932 ERROR: ProcessNewBlock : AcceptBlock FAILED
+    {
+      "recv-time": "1598523855",
+      "err_type": "AcceptBlock FAILED",
+      "recv-date": "2020-08-27 10:24:15.932",
+      "label": "ProcessNewBlock"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} (?<label>Accepted header) for block %{BASE16NUM:block-hash} found on alternative chain at height %{NUMBER:height}
+    1598186937 - 2020-08-23 12:48:57.078 Accepted header for block 0000007ef6f628f14d9b807ab3bb8fee87d5396c45db7557306d5133387cfc85 found on alternative chain at height 226
+    {
+      "result": "Accepted header",
+      "recv-time": "1598186937",
+      "block-hash": "0000007ef6f628f14d9b807ab3bb8fee87d5396c45db7557306d5133387cfc85",
+      "recv-date": "2020-08-23 12:48:57.078",
+      "height": "226"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} mchn: %{WORD:label} with node %{NUMBER:num_node} on block %{NUMBER:num_block}%{GREEDYDATA}
+    1598186377 - 2020-08-23 12:39:37.848 mchn: Synced with node 34 on block 196 - requesting mempool
+    {
+      "recv-time": "1598186377",
+      "num_node": "34",
+      "recv-date": "2020-08-23 12:39:37.848",
+      "num_block": "196",
+      "label": "Synced"
+    }
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} mchn: %{WORD:label} with seed node on block %{NUMBER:num_block}
+    1598186031 - 2020-08-23 12:33:51.466 mchn: Synced with seed node on block 192
+    {
+      "recv-time": "1598186031",
+      "recv-date": "2020-08-23 12:33:51.466",
+      "num_block": "192",
+      "label": "Synced"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} (?<label>receive version message): /%{GREEDYDATA}/: version %{NUMBER:version}, blocks=%{NUMBER:nb_blocks}, us=%{HOSTNAME:useraddr}:%{NUMBER:userport}, peer=%{NUMBER:num_peer}, peeraddr=%{HOSTNAME:peeraddr}:%{NUMBER:peerport}
+    1598186852 - 2020-08-23 12:47:32.671 receive version message: /MultiChain:0.2.0.11/: version 70002, blocks=220, us=172.10.0.109:7189, peer=39, peeraddr=172.10.0.117:56136
+    {
+      "userport": "7189",
+      "recv-date": "2020-08-23 12:47:32.671",
+      "label": "receive version message",
+      "version": "70002",
+      "peerport": "56136",
+      "recv-time": "1598186852",
+      "num_peer": "39",
+      "peeraddr": "172.10.0.117",
+      "nb_blocks": "220",
+      "useraddr": "172.10.0.109"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} (?<label>Leaving block file) %{NUMBER:num_file}: CBlockFileInfo%{GREEDYDATA}blocks=%{NUMBER:nb_block}, size=%{NUMBER:size}, heights=%{DATA:heights_from_to}, time=(?<date_from_to>%{YEAR}-%{MONTHNUM2}-%{MONTHDAY}...%{YEAR}-%{MONTHNUM2}-%{MONTHDAY})
+    1598522033 - 2020-08-27 09:53:53.613 Leaving block file 0: CBlockFileInfo(blocks=54, size=132866474, heights=0...47, time=2020-08-27...2020-08-27)
+    {
+      "recv-time": "1598186852",
+      "size": "130357524",
+      "heights_from_to": "0...54",
+      "recv-date": "2020-08-12 08:22:24.570",
+      "date_from_to": "2020-08-12...2020-08-12",
+      "nb_block": "73",
+      "label": "Leaving block file"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} %{WORD:label}: %{WORD:tx_id}, vin: %{NUMBER:vin}, vout: %{NUMBER:vout}
+    1598519812 - 2020-08-27 09:16:52.033 CommitTransaction: bf32e92e25d414bcf63dced9ecc7bbabf619c3b8ee83dd2feec52da92799e00b, vin: 1, vout: 3
+    {
+      "recv-time": "1598519812",
+      "recv-date": "2020-08-27 09:16:52.033",
+      "vin": "1",
+      "label": "CommitTransaction",
+      "tx_id": "bf32e92e25d414bcf63dced9ecc7bbabf619c3b8ee83dd2feec52da92799e00b",
+      "vout": "3"
+    }
+
+
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} %{WORD:label}: Block Found - %{BASE16NUM:block-hash}, prev: %{BASE16NUM:prev_block-hash}, height: %{NUMBER:height}, txs: %{NUMBER:nb_tx}
+    1598519884 - 2020-08-27 09:18:04.063 MultiChainMiner: Block Found - 0000008b7eadd53bfe57b6894da97a2df0fbc6835ad6fb0701c37942ca121e6b, prev: 000000f67c18ab3b6bbce8f22591ad47035f8bd5e294c31bbdb139906071987a, height: 13, txs: 4
+    {
+      "recv-time": "1598519884",
+      "nb_tx": "4",
+      "block-hash": "0000008b7eadd53bfe57b6894da97a2df0fbc6835ad6fb0701c37942ca121e6b",
+      "prev_block-hash": "000000f67c18ab3b6bbce8f22591ad47035f8bd5e294c31bbdb139906071987a",
+      "recv-date": "2020-08-27 09:18:04.063",
+      "label": "MultiChainMiner",
+      "height": "13"
+    }
