@@ -1,0 +1,24 @@
+This is the manual for any user that would wants to do modifications in my work.
+
+The first thing to look at is the file called 02-beats-input.conf on the server.
+It is stored in the folder named /etc/logstash/conf.d/
+
+The second part of my work is on Kiaban web GUI.
+You will see a certain number of saved objects. 
+All those having the word "Errors" in their names are used for generating reports using Kibana's API.
+All the saved object have filters to look for a certain type of logs that are retrieved.
+The other saved objects are just for data visualization.
+
+The third part is the scripts in the folder /home/ubuntu/ on the server.
+There are two scripts, report.py and test_report.py
+The first script is the one that will generate automatically reports in Kibana.
+The reports will be available for download on Kibana in Management>Reporting section.
+The second script is for testing new report you would like to add.
+If the new report is welle generated, then you can add it in the report.py file.
+
+The last part is the crontab for root user.
+It is this that enables the automation of reports' generation.
+You cannot modify this crontab unless you are granted the root status using sudo command.
+I will not divulgate the password here.
+If you need to be root, you should ask the person in charge of the server.
+However if you change the script report.py, it will be considered even though you are not root.
