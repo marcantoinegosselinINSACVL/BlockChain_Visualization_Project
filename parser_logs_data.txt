@@ -152,10 +152,10 @@
     }
 
 
-%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} (?<label>Accepted header) for block %{BASE16NUM:block-hash} found on alternative chain at height %{NUMBER:height}
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} (?<fork>Accepted header) for block %{BASE16NUM:block-hash} found on alternative chain at height %{NUMBER:height}
     1598186937 - 2020-08-23 12:48:57.078 Accepted header for block 0000007ef6f628f14d9b807ab3bb8fee87d5396c45db7557306d5133387cfc85 found on alternative chain at height 226
     {
-      "result": "Accepted header",
+      "fork": "Accepted header",
       "recv-time": "1598186937",
       "block-hash": "0000007ef6f628f14d9b807ab3bb8fee87d5396c45db7557306d5133387cfc85",
       "recv-date": "2020-08-23 12:48:57.078",
@@ -163,32 +163,32 @@
     }
 
 
-%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} mchn: %{WORD:label} with node %{NUMBER:num_node} on block %{NUMBER:num_block}%{GREEDYDATA}
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} %{WORD:label}: Synced with node %{NUMBER:num_node} on block %{NUMBER:num_block}%{GREEDYDATA}
     1598186377 - 2020-08-23 12:39:37.848 mchn: Synced with node 34 on block 196 - requesting mempool
     {
       "recv-time": "1598186377",
       "num_node": "34",
       "recv-date": "2020-08-23 12:39:37.848",
       "num_block": "196",
-      "label": "Synced"
+      "label": "mchn"
     }
 
-%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} mchn: %{WORD:label} with seed node on block %{NUMBER:num_block}
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} %{WORD:label}: Synced with seed node on block %{NUMBER:num_block}
     1598186031 - 2020-08-23 12:33:51.466 mchn: Synced with seed node on block 192
     {
       "recv-time": "1598186031",
       "recv-date": "2020-08-23 12:33:51.466",
       "num_block": "192",
-      "label": "Synced"
+      "label": "mchn"
     }
 
 
-%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} (?<label>receive version message): /%{GREEDYDATA}/: version %{NUMBER:version}, blocks=%{NUMBER:nb_blocks}, us=%{HOSTNAME:useraddr}:%{NUMBER:userport}, peer=%{NUMBER:num_peer}, peeraddr=%{HOSTNAME:peeraddr}:%{NUMBER:peerport}
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} receive version message: /(?<label>MultiChain):%{GREEDYDATA}/: version %{NUMBER:version}, blocks=%{NUMBER:nb_blocks}, us=%{HOSTNAME:useraddr}:%{NUMBER:userport}, peer=%{NUMBER:num_peer}, peeraddr=%{HOSTNAME:peeraddr}:%{NUMBER:peerport}
     1598186852 - 2020-08-23 12:47:32.671 receive version message: /MultiChain:0.2.0.11/: version 70002, blocks=220, us=172.10.0.109:7189, peer=39, peeraddr=172.10.0.117:56136
     {
       "userport": "7189",
       "recv-date": "2020-08-23 12:47:32.671",
-      "label": "receive version message",
+      "label": "receive version message /MultiChain:0.2.0.11/",
       "version": "70002",
       "peerport": "56136",
       "recv-time": "1598186852",
@@ -199,15 +199,16 @@
     }
 
 
-%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} (?<label>Leaving block file) %{NUMBER:num_file}: CBlockFileInfo%{GREEDYDATA}blocks=%{NUMBER:nb_block}, size=%{NUMBER:size}, heights=%{DATA:heights_from_to}, time=(?<date_from_to>%{YEAR}-%{MONTHNUM2}-%{MONTHDAY}...%{YEAR}-%{MONTHNUM2}-%{MONTHDAY})
+%{NUMBER:recv-time} - %{TIMESTAMP_ISO8601:recv-date} (?<label>Leaving block file) %{NUMBER:num_file}: CBlockFileInfo%{GREEDYDATA}blocks=%{NUMBER:nb_blocks}, size=%{NUMBER:size}, heights=%{DATA:heights_from_to}, time=(?<date_from_to>%{YEAR}-%{MONTHNUM2}-%{MONTHDAY}...%{YEAR}-%{MONTHNUM2}-%{MONTHDAY})
     1598522033 - 2020-08-27 09:53:53.613 Leaving block file 0: CBlockFileInfo(blocks=54, size=132866474, heights=0...47, time=2020-08-27...2020-08-27)
     {
-      "recv-time": "1598186852",
-      "size": "130357524",
-      "heights_from_to": "0...54",
-      "recv-date": "2020-08-12 08:22:24.570",
-      "date_from_to": "2020-08-12...2020-08-12",
-      "nb_block": "73",
+      "num_file": "0",
+      "recv-time": "1598522033",
+      "size": "132866474",
+      "heights_from_to": "0...47",
+      "recv-date": "2020-08-27 09:53:53.613",
+      "date_from_to": "2020-08-27...2020-08-27",
+      "nb_blocks": "54",
       "label": "Leaving block file"
     }
 
